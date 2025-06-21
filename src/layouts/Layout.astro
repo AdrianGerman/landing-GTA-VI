@@ -1,4 +1,5 @@
 ---
+import KeepScrolling from "@/assets/keep-scrolling.svg"
 import "../styles/global.css"
 ---
 
@@ -13,6 +14,9 @@ import "../styles/global.css"
   </head>
   <body>
     <slot />
+    <KeepScrolling
+      class="fixed bottom-3 right-0 left-0 mx-auto text-pink-300 drop-shadow-2xl animate-bounce-pulse"
+    />
   </body>
 </html>
 
