@@ -61,6 +61,13 @@ import LogoCutted from "@/assets/logo-cutted.svg"
 
 <script>
   import { gsap } from "gsap"
+  import { ScrollTrigger } from "gsap/ScrollTrigger"
 
-  console.log("GSAP version:", gsap.version)
+  gsap.registerPlugin(ScrollTrigger)
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      scrub: 1
+    }
+  })
 </script>
