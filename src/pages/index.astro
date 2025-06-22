@@ -70,4 +70,15 @@ import LogoCutted from "@/assets/logo-cutted.svg"
       scrub: 1
     }
   })
+
+  tl.to("#hero-key", {
+    scale: 1,
+    duration: 1
+  }).to(
+    "#hero-key-logo",
+    {
+      opacity: 0
+    },
+    "<"
+  )
 </script>
