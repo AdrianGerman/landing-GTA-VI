@@ -74,11 +74,26 @@ import LogoCutted from "@/assets/logo-cutted.svg"
   tl.to("#hero-key", {
     scale: 1,
     duration: 1
-  }).to(
-    "#hero-key-logo",
-    {
-      opacity: 0
-    },
-    "<"
-  )
+  })
+    .to(
+      "#hero-key-logo",
+      {
+        opacity: 0
+      },
+      "<"
+    )
+    .to(
+      "#hero-key-footer",
+      {
+        opacity: 0
+      },
+      "<"
+    )
+    .to(
+      "#hero-play-button",
+      {
+        opacity: 0
+      },
+      "<"
+    )
 </script>
