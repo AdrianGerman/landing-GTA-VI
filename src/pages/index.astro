@@ -18,13 +18,11 @@ import LogoCutted from "@/assets/logo-cutted.svg"
         <img
           id="hero-key-logo"
           src={HeroKeyLogo.src}
-          alt="Hero Key Logo"
           class="absolute w-full h-full object-cover"
         />
         <img
           id="hero-key-background"
           src={HeroKeyBackground.src}
-          alt="Hero Key Background"
           class="w-full h-full object-cover"
         />
       </picture>
@@ -36,9 +34,8 @@ import LogoCutted from "@/assets/logo-cutted.svg"
   >
     <header class="flex justify-between w-full">
       <LogoVI
-        class="size-12 text-white hover:text-yellow-100 transition-colors duration-500 cursor-pointer"
+        class="size-11 text-white hover:text-yellow-100 transition-colors duration-500 cursor-pointer"
       />
-      <span>menú</span>
     </header>
 
     <button class="absolute inset-0 m-auto cursor-pointer inline-block">
@@ -68,37 +65,16 @@ import LogoCutted from "@/assets/logo-cutted.svg"
   gsap.registerPlugin(ScrollTrigger)
 
   const tl = gsap.timeline({
-    ease: "power2.inOut",
+    ease: "power2.out",
     scrollTrigger: {
       scrub: 1
     }
   })
 
-  tl.to("#hero-key", {
-    scale: 1,
-    duration: 1
-  })
-    .to(
-      "#hero-key-logo",
-      {
-        opacity: 0
-      },
-      "<"
-    )
-    .to(
-      "#hero-key-footer",
-      {
-        opacity: 0
-      },
-      "<"
-    )
-    .to(
-      "#hero-play-button",
-      {
-        opacity: 0
-      },
-      "<"
-    )
+  tl.to("#hero-key", { duration: 1, scale: 1 })
+    .to("#hero-key-logo", { opacity: 0 }, "<")
+    .to("#hero-footer", { opacity: 0 }, "<")
+    .to("#hero-play-button", { opacity: 0 }, "<")
     .to(
       "#logo-mask",
       {
