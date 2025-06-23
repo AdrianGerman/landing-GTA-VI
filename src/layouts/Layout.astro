@@ -20,7 +20,7 @@ import "../styles/global.css"
   </body>
 </html>
 
-<style>
+<style is:global>
   html,
   body {
     background: #111;
@@ -30,6 +30,13 @@ import "../styles/global.css"
     color: white;
     margin: 0;
     width: 100%;
-    height: 100%;
+  }
+
+  #logo-mask {
+    background: white;
+    mask-image: url("/logo-stack.svg");
+    mask-position: center 25%;
+    mask-repeat: no-repeat;
+    mask-size: clamp(5000vh, 3500%, 0vh);
   }
 </style>
